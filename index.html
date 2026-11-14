@@ -261,10 +261,13 @@
 <p class="label rv" data-en="Get involved" data-id="Ikut terlibat">Get involved</p>
 <h2 class="rv d1" data-en="Be part of the <em>first reports</em>." data-id="Jadilah bagian dari <em>laporan pertama</em>.">Be part of the <em>first reports</em>.</h2>
 <form id="joinform" class="rv" novalidate>
+<input type="hidden" name="project" value="waste">
+<input type="hidden" name="_subject" value="New signup: Project 3 (Indonesia Waste Map)">
 <label><span data-en="Name" data-id="Nama">Name</span><input name="name" type="text" autocomplete="name" required></label>
 <label><span data-en="Email" data-id="Email">Email</span><input name="email" type="email" autocomplete="email" required></label>
 <label class="full"><span data-en="I am a..." data-id="Saya adalah...">I am a...</span><select name="role"><option value="citizen" data-en="Resident who wants to report" data-id="Warga yang ingin melapor">Resident who wants to report</option><option value="community" data-en="Community or neighborhood group" data-id="Komunitas atau kelompok warga">Community or neighborhood group</option><option value="volunteer" data-en="Volunteer or developer" data-id="Relawan atau pengembang">Volunteer or developer</option><option value="official" data-en="Local government" data-id="Pemerintah daerah">Local government</option><option value="partner" data-en="Partner or supporter" data-id="Mitra atau pendukung">Partner or supporter</option></select></label>
 <button class="cta" type="submit"><span data-en="Keep me posted" data-id="Kabari saya">Keep me posted</span></button>
+<p class="fine" style="grid-column:1/-1;text-align:center" data-en="We only use your email to update you about this project." data-id="Kami hanya memakai email Anda untuk mengabari soal project ini.">We only use your email to update you about this project.</p>
 <p id="joinstatus" role="status" aria-live="polite"></p>
 </form>
 </div></section>
@@ -285,7 +288,7 @@
    ===================================================== */
 const CONFIG = {
   HUB_URL: "https://muqaddasahteknologiya.biz.id/",
-  WAITLIST_ENDPOINT: ""
+  WAITLIST_ENDPOINT: "https://formspree.io/f/mnpdjwdr"
 };
 const T = o => o[document.documentElement.lang === 'id' ? 'id' : 'en'];
 ['hubLink', 'hubLink2'].forEach(id => {
